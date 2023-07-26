@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- <link href="./style/style.css"> -->
+    <title>Aprilia RSV4</title>
+</head>
+
+<style>
+    :root {
+        /* CSS HEX */
+        --shark: #2c3038;
+        --carnation: #f1564e;
+        --mischka: #dfdee0;
+        --mint-green: #83f99a;
+        --rolling-stone: #74787a;
+        --mid-gray: #5b5c64;
+        --ferra: #744544;
+        --regent-gray: #8c949c;
+
+
+        /* SCSS RGB */
+        --shark: rgba(44, 48, 56, 1);
+        --carnation: rgba(241, 86, 78, 1);
+        --mischka: rgba(223, 222, 224, 1);
+        --mint-green: rgba(131, 249, 154, 1);
+        --rolling-stone: rgba(116, 120, 122, 1);
+        --mid-gray: rgba(91, 92, 100, 1);
+        --ferra: rgba(116, 69, 68, 1);
+        --regent-gray: rgba(140, 148, 156, 1);
+        --mint-green-hover: rgba(123, 234, 156, 1);
+
+
+    }
+
+    .card {
+        background-color: var(--shark);
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .card_with_border {
+        border: 1px solid var(--mischka);
+        border-radius: 20px;
+    }
+
+    .card__body {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .card__title {
+        color: var(--mischka);
+        font-size: 24px;
+        font-weight: 100;
+        margin-bottom: 0.1rem;
+        border-radius: 80px;
+        padding: 1rem;
+    }
+
+    .card__subtitle {
+        color: var(--mischka);
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .card__bottom {
+        padding: 1rem;
+        background-color: var(--mint-green);
+        border-radius: 0 0 20px 20px;
+    }
+
+    .card__bottom:hover {
+        background-color: #7bea9c;
+        color: var(--shark);
+        cursor: pointer;
+    }
+
+    /* reset ul li */
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    @keyframes bounceInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-2000px);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateY(30px);
+        }
+
+        80% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* Animation to slide in from random directions */
+    @keyframes randomDirection {
+        0% {
+            opacity: 0;
+            transform: translate(-2000px, -2000px);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translate(30px, 30px);
+        }
+
+        80% {
+            transform: translate(-10px, -10px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+   
+</style>
+
+<body class="bg-dark">
+
+    <div class="container-fluid text-light">
+        <!-------------------------------- Nav bar section ------------------------------------------------------->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <img src="logo-transparent-png.png" style="height:50px; width: 50px;">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Bikes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+        </nav>
+        <!-- ------------------------------ Nav bar section ends -------------------------------------------->
+
+        <!-- Hero Section -->
+
+        <div class="container fw-light">
+            <div class="row">
+                <h1 class="fw-light mb-0 text-uppercase">Aprilia RSV4</h1>
+                <div class="col-md-8 col-12">
+                    <img id="carImage" src="aprilia-removebg-preview.png" alt="">
+
+                    <section id="details">
+                        <div class="row">
+                            <div class=" col-6">
+                                <p>All Possible Configurations</p>
+                            </div>
+                            <div class="col-6">
+                            </div>
+
+                            <div class="col-md-6 col-6">
+                                <div class="card">
+                                    <div class="card__title">
+                                        Active
+                                    </div>
+                                    <div class="card__body">
+                                        <!-- check icon for list details -->
+
+                                        <ul class="ms-4">
+                                            <li class="mb-2 fw-lighter"><i class="fa fa-check-square-o"
+                                                    aria-hidden="true"></i>
+                                                    1099cc, Aprilia 4 Longitudinal 65° V4 Cylinder, 4-Stroke, Liquid Cooling System</li>
+                                            <li class="mb-2 fw-lighter"><i class="fa fa-check-square-o"
+                                                    aria-hidden="true"></i>
+                                                    Magneti Marelli Digital Electronic Ignition System</li>
+                                            <li class="mb-2 fw-lighter"><i class="fa fa-check-square-o"
+                                                    aria-hidden="true"></i>
+                                                    Mileage : 14.49 kmpl </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-6">
+                                <div class="card_with_border">
+                                    <div class="card__title">
+                                        Variants
+                                    </div>
+                                    <div class="card__body">
+                                        <!-- check icon for list details -->
+
+                                        <ul class="ms-4">
+                                            <li class="mb-2 fw-lighter"><i class="fa fa-check-square-o"
+                                                    aria-hidden="true"></i>
+                                                    RSV4 Factory</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- riight side -->
+                <div class="col-md-4">
+                    <div class="vh-100 border-start ps-4 ps-2" style="border-color: var(--mischka);">
+
+                        <div class="card p-4 mb-5">
+                            <div class="card__title">
+                                Features
+                            </div>
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <div class="card__body">
+                                        <!-- fa icon of fire -->
+                                        <div class="info">
+                                            <p> <i class="fa fa-fire me-2" aria-hidden="true"></i> Consumption</p>
+                                            <p class="fs-3">17.9 Liters</p>
+                                        </div>
+                                        <div class="info">
+                                            <p> <i class="fa fa-power-off me-2" aria-hidden="true"></i>
+                                                Power</p>
+                                            <p class="fs-3">214 bhp</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6">
+                                    <div class="card__body">
+                                        <!-- fa icon of fire -->
+                                        <div class="info">
+                                            <p> <i class="fa fa-car me-2" aria-hidden="true"></i>Speed</p>
+                                            <p class="fs-3">305 kmph</p>
+                                        </div>
+                                        <div class="info">
+                                            <p> <i class="fa fa-power-off me-2" aria-hidden="true"></i>Speed-up</p>
+                                            <p class="fs-3">3.3 sec</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card" style="background-color: var(--carnation);">
+                            <div class="card__title">
+                                Active state of price
+                            </div>
+                            <div class="card__body">
+
+                                <p class="fs-1">
+                                    <i class="fa fa-inr fs-6" aria-hidden="true"></i>
+                                    23.69 Lakh<br>
+                                    <span class="fs-6">current price</span>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+    </div>
+</body>
+
+</html>
